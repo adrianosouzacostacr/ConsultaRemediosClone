@@ -1,4 +1,4 @@
-name: Build Android and iOS in Main
+name: Build Android and iOS
 
 on: [push]
 
@@ -14,5 +14,5 @@ jobs:
           yarn
       - name: Run tests
         run: |
-          yarn test
+          yarn test --coverage
           bash <(curl -s https://codecov.io/bash)
