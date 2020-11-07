@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home page renders correctly 1`] = `
+<RCTSafeAreaView
+  emulateUnlessSupported={true}
+  style={
+    Object {
+      "alignItems": "center",
+      "flex": 1,
+      "justifyContent": "center",
+      "overflow": "visible",
+    }
+  }
+>
+  <Text
+    accessibilityLabel="message"
+    style={Object {}}
+  >
+    Agora sim vai dar certo \\o/
+  </Text>
+  <Text
+    accessibilityLabel="brand"
+    style={Object {}}
+  >
+    Consulta Remédios
+  </Text>
+</RCTSafeAreaView>
+`;

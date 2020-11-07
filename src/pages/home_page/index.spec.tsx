@@ -10,7 +10,9 @@ describe('Home page', () => {
   });
 
   it('renders correctly', () => {
-    render(<HomePage />);
+    const {toJSON} = render(<HomePage />);
+    const tree = toJSON();
+    expect(tree).toMatchSnapshot();
   });
 
   it('should display correctly infos', () => {
