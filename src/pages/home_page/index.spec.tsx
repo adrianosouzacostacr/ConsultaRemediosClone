@@ -2,9 +2,13 @@ import 'react-native';
 import React from 'react';
 import HomePage from './';
 
-import {render} from '@testing-library/react-native';
+import {render, cleanup} from '@testing-library/react-native';
 
 describe('Home page', () => {
+  afterEach(() => {
+    cleanup();
+  });
+
   it('renders correctly', () => {
     render(<HomePage />);
   });
