@@ -7,8 +7,11 @@ const App = () => {
     <>
       <StatusBar />
       <SafeAreaView style={styles.safeArea}>
-        <Text style={styles.text} accessible={true} testID="text">
+        <Text style={styles.text} accessible={true} testID="message">
           Agora sim vai dar certo \o/
+        </Text>
+        <Text style={styles.text} accessible={true} testID="brand">
+          Consulta Remédios
         </Text>
       </SafeAreaView>
     </>
