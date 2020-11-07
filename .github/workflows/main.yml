@@ -1,0 +1,18 @@
+name: Build Android and iOS in Main
+
+on:
+  push:
+    branches:
+      - CI
+
+jobs:
+  install-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install yarn dependencies
+        run: |
+          yarn
+      - name: Run tests
+        run: |
+          yarn test
