@@ -1,9 +1,6 @@
 name: Build Android and iOS in Main
 
-on:
-  push:
-    branches:
-      - CI
+on: [push]
 
 jobs:
   install-and-test:
@@ -11,8 +8,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Install yarn dependencies
-        run: |
-          yarn
+          run: yarn
       - name: Run tests
-        run: |
-          yarn test
+          run: yarn test --coverage
+          run: bash <(curl -s https://codecov.io/bash)
