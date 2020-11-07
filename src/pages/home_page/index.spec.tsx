@@ -9,12 +9,12 @@ describe('Home page', () => {
     render(<HomePage />);
   });
 
-  it('should display correcly infos', () => {
+  it('should display correctly infos', () => {
     const {getAllByA11yLabel} = render(<HomePage />);
     const messageLabel = getAllByA11yLabel('message');
     const brandLabel = getAllByA11yLabel('brand');
 
-    expect(messageLabel[0].children[0]).toEqual('Agora sim vai dar certo \\o/');
-    expect(brandLabel[0].children[0]).toEqual('Consulta Remédios');
+    expect(messageLabel[0].children[0]).toBe('Agora sim vai dar certo \\o/');
+    expect(brandLabel[0].children[0]).toBe('Consulta Remédios');
   });
 });
