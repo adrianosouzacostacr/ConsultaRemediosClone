@@ -14,5 +14,5 @@ jobs:
           yarn
       - name: Run tests
         run: |
-          yarn test_cov
+          yarn test
           bash <(curl -s https://codecov.io/bash)
