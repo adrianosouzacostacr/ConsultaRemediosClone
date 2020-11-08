@@ -12,7 +12,7 @@ jobs:
           CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
         run: |
           yarn
-      - name: Run Lint
+      - name: Run lint
         run: |
           yarn lint
       - name: Run tests
