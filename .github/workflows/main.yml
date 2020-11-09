@@ -12,17 +12,17 @@ jobs:
           CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
         run: |
           yarn
+      - uses: DamianReeves/write-file-action@v1.0
       - name: Write ENV file
-        uses: DamianReeves/write-file-action@v1.0
-          with:
-            path: ${{ env.home}}/.env.js
-            contents: |
-              echo "
-                export default {
-                  product_name: '${{ secrets.PRODUCT_NAME }}',
-                };
-              "
-            write-mode: overwrite
+        with:
+          path: ${{ env.home}}/.env.js
+          contents: |
+            echo "
+              export default {
+                product_name: '${{ secrets.PRODUCT_NAME }}',
+              };
+            "
+          write-mode: overwrite
       - name: Run lint
         run: |
           yarn lint
