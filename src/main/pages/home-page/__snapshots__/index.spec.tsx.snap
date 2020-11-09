@@ -14,13 +14,11 @@ exports[`Home page renders correctly 1`] = `
 >
   <Text
     accessibilityLabel="brand"
-    style={Object {}}
   >
     Consulta Remédios
   </Text>
   <Text
     accessibilityLabel="message"
-    style={Object {}}
   >
     Agora sim vai dar certo \\o/
   </Text>
