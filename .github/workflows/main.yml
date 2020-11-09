@@ -13,7 +13,7 @@ jobs:
         run: |
           yarn
       - name: Generate env file
-        run: ./generate_env_file.sh
+        run: ./shell/generate_env_file.sh
       - name: Run lint
         run: |
           yarn lint
