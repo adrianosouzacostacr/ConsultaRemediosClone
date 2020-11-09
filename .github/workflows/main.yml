@@ -6,12 +6,6 @@ jobs:
   install-and-test:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - name: Install yarn dependencies
-        env:
-          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
-        run: |
-          yarn
       - uses: DamianReeves/write-file-action@v1.0
       - name: Write ENV file
         with:
@@ -23,6 +17,12 @@ jobs:
               };
             "
           write-mode: overwrite
+      - uses: actions/checkout@v2
+      - name: Install yarn dependencies
+        env:
+          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+        run: |
+          yarn
       - name: Run lint
         run: |
           yarn lint
