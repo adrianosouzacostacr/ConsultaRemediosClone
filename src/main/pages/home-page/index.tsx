@@ -2,21 +2,13 @@ import React from 'react';
 
 import {SafeAreaView, StyleSheet, Text, StatusBar} from 'react-native';
 
-import env from './../../../../env';
-
 const App = () => {
-  const {product_name} = env;
-
   return (
     <>
       <StatusBar />
       <SafeAreaView style={styles.safeArea}>
-        <Text accessibilityLabel="brand" testID="">
-          {product_name}
-        </Text>
-        <Text accessibilityLabel="message" testID="">
-          Agora sim vai dar certo \o/
-        </Text>
+        <Text accessibilityLabel="brand">Consulta Remédios</Text>
+        <Text accessibilityLabel="message">Agora sim vai dar certo \o/</Text>
       </SafeAreaView>
     </>
   );
