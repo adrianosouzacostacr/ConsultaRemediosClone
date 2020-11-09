@@ -12,6 +12,11 @@ jobs:
           CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
         run: |
           yarn
+      - name: Generate env file
+        run: |
+          sed
+            -e s/product_name/${{ secrets.PRODUCT_NAME }}/g
+            env.example.js > env.js
       - name: Run lint
         run: |
           yarn lint
