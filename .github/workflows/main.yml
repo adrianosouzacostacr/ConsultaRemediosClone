@@ -7,13 +7,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - name: Generate env file
+        run: echo "sed -e s/CI_PRODUCT_NAME/${{ secrets.PRODUCT_NAME }}/g env.example.js > env.js"
       - name: Install yarn dependencies
         env:
           CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
         run: |
           yarn
-      - name: Generate env file
-        run: echo "sed -e s/CI_PRODUCT_NAME/${{ secrets.PRODUCT_NAME }}/g env.example.js > env.js"
       - name: Run lint
         run: |
           yarn lint
