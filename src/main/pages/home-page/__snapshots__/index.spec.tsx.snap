@@ -14,11 +14,13 @@ exports[`Home page renders correctly 1`] = `
 >
   <Text
     accessibilityLabel="brand"
+    testID=""
   >
     Consulta Remédios
   </Text>
   <Text
     accessibilityLabel="message"
+    testID=""
   >
     Agora sim vai dar certo \\o/
   </Text>

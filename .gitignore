@@ -67,4 +67,4 @@ coverage/
 
 # Environments
 
-.env
+env.js
