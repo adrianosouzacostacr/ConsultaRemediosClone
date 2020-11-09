@@ -4,9 +4,9 @@ require_relative '../node_modules/@react-native-community/cli-platform-ios/nativ
 platform :ios, '10.0'
 
 project 'ConsultaRemediosClone',
-'ConsultaRemediosClone Debug' => :debug,
-'ConsultaRemediosClone Staing' => :debug,
-'ConsultaRemediosClone' => :release
+'Debug' => :debug,
+'Staging' => :debug,
+'Release' => :release
 
 target 'ConsultaRemediosClone' do
   config = use_native_modules!

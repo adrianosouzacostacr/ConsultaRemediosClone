@@ -5,7 +5,8 @@
   "scripts": {
     "postinstall": "husky install",
     "android": "react-native run-android",
-    "ios": "react-native run-ios",
+    "ios": "react-native run-ios --scheme ConsultaRemediosClone Debug --configuration Debug",
+    "ios_staging": "react-native run-ios --scheme ConsultaRemediosClone Staging --configuration Staging",
     "start": "react-native start",
     "device": "react-native run-ios --device",
     "test": "jest --coverage",
