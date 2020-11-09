@@ -1,1 +1,0 @@
-sed -e s/CI_PRODUCT_NAME/test/g env.example.js > env.js
