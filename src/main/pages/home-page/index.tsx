@@ -7,12 +7,8 @@ const App = () => {
     <>
       <StatusBar />
       <SafeAreaView style={styles.safeArea}>
-        <Text style={styles.text} accessibilityLabel="brand">
-          Consulta Remédios
-        </Text>
-        <Text style={styles.text} accessibilityLabel="message">
-          Agora sim vai dar certo \o/
-        </Text>
+        <Text accessibilityLabel="brand">Consulta Remédios</Text>
+        <Text accessibilityLabel="message">Agora sim vai dar certo \o/</Text>
       </SafeAreaView>
     </>
   );
@@ -25,7 +21,6 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
-  text: {},
 });
 
 export default App;
