@@ -6,17 +6,6 @@ jobs:
   install-and-test:
     runs-on: ubuntu-latest
     steps:
-      - uses: DamianReeves/write-file-action@v1.0
-      - name: Write ENV file
-        with:
-          path: ${{ env.home}}/.env.js
-          contents: |
-            echo "
-              export default {
-                product_name: '${{ secrets.PRODUCT_NAME }}',
-              };
-            "
-          write-mode: overwrite
       - uses: actions/checkout@v2
       - name: Install yarn dependencies
         env:
