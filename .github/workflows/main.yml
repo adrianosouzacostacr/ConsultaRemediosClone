@@ -8,6 +8,13 @@ jobs:
     steps:
       - name: Checkout main branch
         uses: actions/checkout@v2
+      - name: Write ENV file
+      - uses: DamianReeves/write-file-action
+        with:
+          path: ${{ env.home}}/.bashrc
+          contents: |
+            echo "Hello World!"
+          write-mode: append
       - name: Install yarn dependencies
         env:
           CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
