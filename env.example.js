@@ -1,3 +1,3 @@
 export default {
-  product_name: 'CI_PRODUCT_NAME',
+  product_name: 'REPLACE_PRODUCT_NAME',
 };
