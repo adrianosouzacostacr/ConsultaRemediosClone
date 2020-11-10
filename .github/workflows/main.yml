@@ -8,6 +8,11 @@ jobs:
     steps:
       - name: Write File
         uses: DamianReeves/write-file-action@v1.0
+        with:
+        path: ${{ env.home}}/env.json
+        contents: |
+          echo "Hello World!"
+        write-mode: overwrite
       - name: Checkout main branch
         uses: actions/checkout@v2
       - name: Install yarn dependencies
