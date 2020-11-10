@@ -18,13 +18,9 @@ jobs:
           yarn lint
       - name: Create env file
         run: |
-          touch env.js
-          echo "
-          export default {
-            product_name: '${{ secrets.PRODUCT_NAME }}',
-          };
-          " >> env.js
-          cat env.js
+          sed
+          -e s/CI_PRODUCT_NAME/${{ secrets.PRODUCT_NAME }}/g
+          env.example.js > env.js
       - name: Run tests
         run: |
           yarn test
