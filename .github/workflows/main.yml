@@ -8,9 +8,9 @@ jobs:
     steps:
       - name: Checkout main branch
         uses: actions/checkout@v2
-      - name: Install yarn dependencies
         env:
           CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+      - name: Install yarn dependencies
         run: |
           yarn
       - name: Create env file
