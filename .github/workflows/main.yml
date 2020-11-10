@@ -18,13 +18,10 @@ jobs:
           touch env.js
           echo "
           export default {
-            product_name: '${{ secrets.PRODUCT_NAME }}',
+            product_name: 'CI_PRODUCT_NAME',
           };
           " >> env.js
           cat env.js
-      - name: Run lint
-        run: |
-          yarn lint
       - name: Run tests
         run: |
           yarn test
