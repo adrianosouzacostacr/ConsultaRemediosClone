@@ -6,13 +6,6 @@ jobs:
   install-and-test:
     runs-on: ubuntu-latest
     steps:
-      - name: Write File
-        uses: DamianReeves/write-file-action@v1.0
-        with:
-          path: ${{ env.home}}/env.json
-          contents: |
-            echo "Hello World!"
-          write-mode: preserve
       - name: Checkout main branch
         uses: actions/checkout@v2
       - name: Install yarn dependencies
@@ -20,6 +13,11 @@ jobs:
           CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
         run: |
           yarn
+      - name: Create env file
+        run: |
+          touch env.json
+          echo API_KEY=${{ secrets.PRODUCT_NAME }} >> env.json
+          cat env.json
       - name: Run lint
         run: |
           yarn lint
