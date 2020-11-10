@@ -15,7 +15,7 @@ jobs:
           yarn
       - name: Create env file
         run: |
-          sed -e 's/CI_PRODUCT_NAME/${{secrets.PRODUCT_NAME}}/g' env.example.js > env.js
+          sed -e 's/REPLACE_PRODUCT_NAME/${{secrets.PRODUCT_NAME}}/g' env.example.js > env.js
       - name: Run lint
         run: |
           yarn lint
