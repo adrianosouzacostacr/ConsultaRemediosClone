@@ -39,6 +39,10 @@
   "jest": {
     "preset": "react-native",
     "collectCoverage": true,
+    "coverageReporters": [
+      "html",
+      "lcov"
+    ],
     "globals": {
       "branches": 80,
       "functions": 80,
