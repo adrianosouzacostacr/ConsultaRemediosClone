@@ -15,9 +15,13 @@ jobs:
           yarn
       - name: Create env file
         run: |
-          touch env.json
-          echo API_KEY=${{ secrets.PRODUCT_NAME }} >> env.json
-          cat env.json
+          touch env.js
+          echo "
+          export default {
+            product_name: '${{ secrets.PRODUCT_NAME }}',
+          };
+          " >> env.js
+          cat env.js
       - name: Run lint
         run: |
           yarn lint
