@@ -13,12 +13,12 @@ jobs:
           CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
         run: |
           yarn
+      - name: Create env file
+        run: |
+          sed -e 's/CI_PRODUCT_NAME/${{secrets.PRODUCT_NAME}}/g' env.example.js > env.js
       - name: Run lint
         run: |
           yarn lint
-      - name: Create env file
-        run: |
-          sed -e 's/CI_PRODUCT_NAME/teste/g' env.example.js > env.js
       - name: Run tests
         run: |
           yarn test
