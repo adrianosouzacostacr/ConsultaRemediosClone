@@ -6,10 +6,10 @@ jobs:
   install-and-test:
     runs-on: ubuntu-latest
     steps:
+      - name: Write File
+        uses: DamianReeves/write-file-action@v1.0
       - name: Checkout main branch
         uses: actions/checkout@v2
-      - name: Write File
-          uses: DamianReeves/write-file-action@v1.0
       - name: Install yarn dependencies
         env:
           CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
